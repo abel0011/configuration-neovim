@@ -141,7 +141,7 @@ nnoremap <leader>w :w<CR>
 " Guardar Y Salir
 nnoremap <leader>1w :wq<CR>
 " Salir sin guardar
-nnoremap <leader>2w :wq!<CR> 
+nnoremap <leader>2w :exit!<CR> 
 
 " Abrir el archivo init.vim con <líder> + e
 nnoremap <leader>e :e $MYVIMRC<CR>
@@ -173,6 +173,8 @@ let g:webdevicons_enable_nerdtree = 1
 "----------------------EASY MOTION---------------------------"
 "easymotion
 nmap <leader>f <Plug>(easymotion-s2)
+noremap <up> <nop>
+noremap <down> <nop>
 
 let g:EasyMotion_smartcase = 1
 

@@ -20,8 +20,8 @@ set hidden  " Permitir cambiar de buffers sin tener que guardarlos
 set smartcase  " No ignorar mayúsculas si la palabra a buscar contiene mayúsculas
 set spelllang=en,es  " Corregir palabras usando diccionarios en inglés y español
 set termguicolors  " Activa true colors en la terminal
-
-
+set splitbelow
+set splitright
 " Required:
 call plug#begin('~/.config/nvim/plugged')
 "
@@ -149,11 +149,11 @@ nnoremap <leader>e :e $MYVIMRC<CR>
 
 
 " Moverse al buffer siguiente con <líder> + l
-nnoremap <leader>l :bnext<CR>
+nnoremap <leader>ne :bnext<CR>
 " Moverse al buffer anterior con <líder> + j
-nnoremap <leader>j :bprevious<CR>
+nnoremap <leader>pr :bprevious<CR>
 " Cerrar el buffer actual con <líder> + q
-nnoremap <leader>q :bdelete<CR>
+nnoremap <leader>q :bdelete!<CR>
 
 "------------------------------------------------------------"
 
@@ -198,7 +198,13 @@ let g:indentLine_char_list = ['│', '┊']
 
 
 " Abrir terminal
-map <F2> :belowright terminal<CR>
+map <F2> :split <CR>:ter<CR>:resize 15<CR>
+"Controlar el Modo lectura con ESC en la terminal
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <M-[> <Esc>
+  tnoremap <C-v><Esc> <Esc>
+endif
 
 "Hailitar teclas de navegacion
 noremap <up> <nop>

@@ -257,6 +257,18 @@ nnoremap <silent> <down> :resize -5<CR>
 "quitar la navgacion / (precionar / + esc)
 nnoremap / /a<DEL>
 
+" Autocompletar parentesis y llaves
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap { <CR>{<CR>}<Esc>0
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+
+
+
+
 " Turn-on dracula color scheme
 syntax on
 color dracula

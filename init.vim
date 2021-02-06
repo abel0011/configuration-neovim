@@ -1,5 +1,3 @@
-" Autocompletado
-
 set title  " Muestra el nombre del archivo en la ventana de la terminal
 set number  " Muestra los números de las líneas
 set mouse=a  " Permite la integración del mouse (seleccionar texto, mover el cursor)
@@ -83,13 +81,13 @@ let mapleader= ','
 let g:NERDTreeChDirMode = 2  " Cambia el directorio actual al nodo padre actual
 
 " Mostrar buffers abiertos (como pestañas)
-let g:airline#extensions#tabline#enabled = 1 
+let g:airline#extensions#tabline#enabled = 1
 " Mostrar sólo el nombre del archivo
-let g:airline#extensions#tabline#fnamemod = ':t' 
+let g:airline#extensions#tabline#fnamemod = ':t'
 " Cargar fuente Powerline y símbolos (ver nota)
 let g:airline_powerline_fonts = 1
 " No mostrar el modo actual (ya lo muestra la barra de estado)
-set noshowmode  
+set noshowmode
 
 " No mostrar en ciertos tipos de buffers y archivos
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal']
@@ -146,11 +144,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Guardar con <líder> + s
-nnoremap <leader>w :w<CR> 
+nnoremap <leader>w :w<CR>
 " Guardar Y Salir
 nnoremap <leader>1w :wq<CR>
 " Salir sin guardar
-nnoremap <leader>2w :exit!<CR> 
+nnoremap <leader>2w :exit!<CR>
 
 " Abrir el archivo init.vim con <líder> + e
 nnoremap <leader>e :e $MYVIMRC<CR>
@@ -190,7 +188,7 @@ let g:EasyMotion_smartcase = 1
 "---------------------------FZF------------------------------"
 "Configuration of FZF cotrl + p
 let g:fzf_preview_window = 'right:40%'
-nnoremap <c-p> :Files<CR> 
+nnoremap <c-p> :Files<CR>
 nnoremap <c-g> :GitFiles<CR>
 " use current git repo/file director with ctrl p
 let g:ctrlp_working_path_mode = 'ra'
@@ -265,9 +263,6 @@ inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
-
-
-
 
 " Turn-on dracula color scheme
 syntax on

@@ -226,4 +226,3 @@ nnoremap / /a<DEL>
 " Turn-on dracula color scheme
 syntax on
 color dracula
-

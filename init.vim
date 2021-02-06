@@ -1,3 +1,5 @@
+" Autocompletado
+
 set title  " Muestra el nombre del archivo en la ventana de la terminal
 set number  " Muestra los números de las líneas
 set mouse=a  " Permite la integración del mouse (seleccionar texto, mover el cursor)
@@ -28,6 +30,12 @@ call plug#begin('~/.config/nvim/plugged')
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+"Git integration
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+
 Plug 'scrooloose/nerdtree' "
 
 Plug 'dracula/vim' " Nesesario para el theme dracula
@@ -58,6 +66,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' } " javascript
 Plug 'ryanoasis/vim-devicons' " Mostrar icons
 
 Plug 'yggdroot/indentline' "ident line
+
 
 
 "Functionality
@@ -198,6 +207,31 @@ let g:airline_theme='tomorrow'
 "indentline
 let g:indentLine_char_list = ['│', '┊']
 
+"------------------------------------------------------------"
+
+"------------------------SIGNIFY-----------------------------"
+"signify
+" Change these if you want
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
+
+" I find the numbers disctracting
+let g:signify_sign_show_count = 0
+let g:signify_sign_show_text = 1
+
+
+" Jump though hunks
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
+nmap <leader>gJ 9999<leader>gJ
+nmap <leader>gK 9999<leader>gk
+
+" If you like colors instead
+highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
+highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
+highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
 
 " Abrir terminal
 map <F2> :split <CR>:ter<CR>:resize 15<CR>
@@ -226,3 +260,4 @@ nnoremap / /a<DEL>
 " Turn-on dracula color scheme
 syntax on
 color dracula
+

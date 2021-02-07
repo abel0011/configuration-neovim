@@ -6,6 +6,7 @@ set mouse=a  " Permite la integración del mouse (seleccionar texto, mover el cu
 
 set relativenumber "Numero de saltos
 set cursorline  " Resalta la línea actual
+set cuc cul " Resalta la columna
 syntax on
 "set cursorline  " Resalta la línea actual
 
@@ -23,23 +24,28 @@ set termguicolors  " Activa true colors en la terminal
 set splitbelow
 set splitright
 
+set hlsearch " resala la busqueda
+set incsearch "la busqueda vaya apareciendo
+
 " Required:
 call plug#begin('~/.config/nvim/plugged')
 "
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+
+
+
+""Plug 'ervandew/supertab'
+Plug 'msanders/snipmate.vim' " autocompleta con tab
+
 "Git integration
-
-Plug 'msanders/snipmate.vim'
-
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
 Plug 'scrooloose/nerdtree' "
-
 Plug 'dracula/vim' " Nesesario para el theme dracula
 Plug 'tpope/vim-surround'  " Es buena idea agregar una descripción del plugin
 
@@ -69,20 +75,26 @@ Plug 'ryanoasis/vim-devicons' " Mostrar icons
 
 Plug 'yggdroot/indentline' "ident line
 
-
+Plug 'leafgarland/typescript-vim' " Typescrypt
+Plug 'ianks/vim-tsx'
 
 "Functionality
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'neoclide/coc.nvim'
+let g:coc_global_extensions=['coc-json' , 'coc-tsserver' , 'coc-emmet' , 'coc-tslint' , 'coc-prettier']
 
 call plug#end()
 
+
+
+
+
 "tecla maestra o lider
 let mapleader= ','
-"
-let g:NERDTreeChDirMode = 2  " Cambia el directorio actual al nodo padre actual
+let g:NERDTreeChDirMode = 2  " Cambia el directocrio actual al nodo padre actual
 
 " Mostrar buffers abiertos (como pestañas)
 let g:airline#extensions#tabline#enabled = 1

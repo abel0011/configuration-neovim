@@ -22,6 +22,7 @@ set spelllang=en,es  " Corregir palabras usando diccionarios en inglés y españ
 set termguicolors  " Activa true colors en la terminal
 set splitbelow
 set splitright
+
 " Required:
 call plug#begin('~/.config/nvim/plugged')
 "
@@ -29,6 +30,9 @@ call plug#begin('~/.config/nvim/plugged')
 "" Plug install packages
 "*****************************************************************************
 "Git integration
+
+Plug 'msanders/snipmate.vim'
+
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -204,6 +208,17 @@ let g:airline_theme='tomorrow'
 "----------------------INDENT LINE---------------------------"
 "indentline
 let g:indentLine_char_list = ['│', '┊']
+
+"----------------------GIT---------------------------"
+
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gc :Gcommit<CR>
+noremap <Leader>gsh :Gpush<CR>
+noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
+noremap <Leader>gr :Gremove<CR>
 
 "------------------------------------------------------------"
 

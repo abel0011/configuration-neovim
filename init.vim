@@ -87,6 +87,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+Plug 'neoclide/coc.nvim'
+let g:coc_global_extensions=['coc-json' , 'coc-tsserver' , 'coc-emmet' , 'coc-tslint' , 'coc-prettier']
 
 Plug 'neoclide/coc.nvim'
 

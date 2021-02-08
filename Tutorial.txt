@@ -1,0 +1,44 @@
+yw --> copiar la sig palabra
+d$ --> elimnar toda la linea
+ggyG --> copiart todo el texto
+diw --> eliminar una palabra
+dis --> eliminar una oracion
+di() --> eliminar texto de un parentesis
+da() --> elimnar con parentesis
+vip -->seleccionar parrafo
+vas -->seleccionar oracion inculde espacios
+----------------------------------------------------------------------------------
+
+
+
+{
+}
+
+
+ oracion creada para practicar
+
+ Nueva Nueva Nueva Nueva Nueva Nueva Nueva 
+Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva Nueva 
+a(sadfs sfd sa)
+Nueva oracion creada para practicar
+ oracion creada para practicar
+sdfooNueva dfNuvad o
+
+     dsf sdf 
+     sdf 
+
+dddddsf sdf 
+     sdf sf sdf 
+     sdf sf sdf 
+     sdf sf sdf 
+     sdf sf sdf 
+     sdf 
+     dsf sdf 
+     dsf sdf 
+     dsf sdf 
+     dsf sdf 
+     sdf 
+     sdf 
+     sdf 
+     sdf 
+sdf¿''''''''''''

@@ -40,8 +40,6 @@ set updatetime=200
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-let g:vim_boostrap_theme="molokai"
-
 
 
 
@@ -51,6 +49,8 @@ call plug#begin('~/.config/nvim/plugged')
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+"Them"
+Plug 'morhetz/gruvbox'
 
 "Git integration
 Plug 'mhinz/vim-signify'
@@ -92,7 +92,6 @@ let g:coc_global_extensions=['coc-json' , 'coc-tsserver' , 'coc-emmet' , 'coc-ts
 
 Plug 'neoclide/coc.nvim'
 
-Plug 'tomasr/molokai'
 call plug#end()
 
 let g:coc_global_extensions=['coc-json' , 'coc-tsserver' , 'coc-emmet' , 'coc-tslint' , 'coc-prettier', 'coc-html']
@@ -310,7 +309,7 @@ nnoremap / /a<DEL>
 " Autocompletar parentesis y llaves
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
-inoremap { <CR>{<CR>}<Esc>0
+" inoremap { <CR>{<CR>}<Esc>0
 inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap ' ''<Esc>i
@@ -470,6 +469,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "------------------------------------------------------------"
 
-" -------------------------MOLOKAI-----------------------"
-syntax on
-colorscheme molokai
+" -------------------------gruvbox dark-----------------------"
+colorscheme gruvbox
+let g:gruvbox_contrast = 'medium'
+let g:gruvbox_italic = '0'
+

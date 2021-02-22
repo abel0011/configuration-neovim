@@ -65,16 +65,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 Plug 'Yggdroot/indentLine'
 
-
-
+"Live Server"
+Plug 'turbio/bracey.vim'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'Shougo/echodoc.vim' " Muestra la firma de la función.
 
 Plug 'w0rp/ale' " Analizador estático de codigo
 
 Plug 'sheerun/vim-polyglot' " Resaltado de sintaxix polyglot
-
-
-
 
 Plug 'ryanoasis/vim-devicons' " Mostrar icons
 
@@ -88,7 +86,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'neoclide/coc.nvim'
-let g:coc_global_extensions=['coc-json' , 'coc-tsserver' , 'coc-emmet' , 'coc-tslint' , 'coc-prettier']
+let g:coc_global_extensions=['coc-json' , 'coc-tsserver' , 'coc-emmet' , 'coc-tslint' , 'coc-prettier','coc-omnisharp']
 
 Plug 'neoclide/coc.nvim'
 
@@ -189,7 +187,7 @@ nnoremap <leader>q :bdelete!<CR>
 
 "----------------------EASY MOTION---------------------------"
 "easymotion
-nmap <leader>,, <Plug>(easymotion-s2)
+nmap <leader>3 <Plug>(easymotion-s2)
 noremap <up> <nop>
 noremap <down> <nop>
 
@@ -473,4 +471,20 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 colorscheme gruvbox
 let g:gruvbox_contrast = 'medium'
 let g:gruvbox_italic = '0'
+
+"------------------------------------------------------------"
+"
+"Configuration coc 
+nnoremap <C-u> :CocAction<C-R>
+
+"Live server"
+
+let g:bracey_refresh_on_save=1
+let g:bracey_auto_start_browser=0
+let g:bracey_browser_command='opera'
+let g:bracey_server_port=5050
+
+autocmd FileType html,css,javascript map <leader>s :Bracey<CR>
+autocmd FileType html,css,javascript map <leader>st :BraceyStop<CR>
+autocmd FileType html,css,javascript map <leader>re :BraceyReload<CR>
 

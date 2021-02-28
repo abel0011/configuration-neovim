@@ -487,4 +487,14 @@ let g:bracey_server_port=5050
 autocmd FileType html,css,javascript map <leader>s :Bracey<CR>
 autocmd FileType html,css,javascript map <leader>st :BraceyStop<CR>
 autocmd FileType html,css,javascript map <leader>re :BraceyReload<CR>
+"http://127.0.0.1:5050"
+"
+"
+"
+"map <F5> 0//hola<Esc> 
+""map <F5> 0gewi{<Esc>nuevo}<Esc>
+map <F5> 0i//
+map <F6> 0$i<!-- --<Esc>04li
+map <F7> 0i/*  */<Esc>0lli
+
 

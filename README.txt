@@ -8,3 +8,16 @@
 #https://vimawesome.com
 #https://www.youtube.com/watch?v=1mt2f3NXR2k "config de nvim español
 
+DOCUMENTACIÓN TEORICA 
+---------------------
+vim referencia rapida
+https://www.ibiblio.org/pub/Linux/docs/LuCaS/Tutoriales/doc-tutorial-vim/Guia-Vim-html/
+
+Buscar Remplazar
+https://www.ibiblio.org/pub/Linux/docs/LuCaS/Tutoriales/doc-tutorial-vim/Guia-Vim-html/
+
+documentación basica
+http://www.sromero.org/wiki/linux/aplicaciones/manual_vim
+
+lenguaje vim 
+https://www.atareao.es/tutorial/vim/el-lenguaje-de-vim/

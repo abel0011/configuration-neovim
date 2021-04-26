@@ -1,4 +1,3 @@
-
 set title  " Muestra el nombre del archivo en la ventana de la terminal
 set number  " Muestra los números de las líneas
 set mouse=a  " Permite la integración del mouse (seleccionar texto, mover el cursor)
@@ -179,9 +178,9 @@ nnoremap <leader>e :e $MYVIMRC<CR>
 
 
 " Moverse al buffer siguiente con <líder> + l
-nnoremap <leader>ne :bnext<CR>
+nnoremap <c-m> :bnext<CR>
 " Moverse al buffer anterior con <líder> + j
-nnoremap <leader>pr :bprevious<CR>
+nnoremap <c-n> :bprevious<CR>
 " Cerrar el buffer actual con <líder> + q
 nnoremap <leader>q :bdelete!<CR>
 
@@ -385,8 +384,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+"xmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
+"
+vmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -481,20 +483,22 @@ nnoremap <C-u> :CocAction<C-R>
 
 let g:bracey_refresh_on_save=1
 let g:bracey_auto_start_browser=0
-let g:bracey_browser_command='opera'
+let g:bracey_browser_command='brave'
 let g:bracey_server_port=5050
+
+"Prettier
+nmap <leader>f <Plug>:CocCommand prettier.formatFile<Plug>
+
 
 autocmd FileType html,css,javascript map <leader>s :Bracey<CR>
 autocmd FileType html,css,javascript map <leader>st :BraceyStop<CR>
 autocmd FileType html,css,javascript map <leader>re :BraceyReload<CR>
 "http://127.0.0.1:5050"
-"
-"
-"
+
+
+
 "map <F5> 0//hola<Esc> 
 ""map <F5> 0gewi{<Esc>nuevo}<Esc>
 map <F5> 0i//
 map <F6> 0$i<!-- --<Esc>04li
 map <F7> 0i/*  */<Esc>0lli
-
-
